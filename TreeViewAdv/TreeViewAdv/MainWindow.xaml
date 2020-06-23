@@ -7,23 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <syncfusion:TreeViewAdv x:Name="TreeViewAdv" ItemsSource="{Binding TreeItems}" SelectedTreeItem="{Binding SelectedTreeItem, Mode=TwoWay}" Width="250" Height="350" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <syncfusion:TreeViewAdv x:Name="TreeViewAdv" ItemsSource="{Binding TreeItems}" SelectedTreeItem="{Binding SelectedItem, Mode=TwoWay}" Width="150" Height="150">
 
             <syncfusion:TreeViewAdv.DataContext>
                 <local:ViewModel/>
             </syncfusion:TreeViewAdv.DataContext>
 
             <syncfusion:TreeViewAdv.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding SubItems}">
+                <HierarchicalDataTemplate>
                     <TextBlock Text="{Binding Header}" />
                 </HierarchicalDataTemplate>
             </syncfusion:TreeViewAdv.ItemTemplate>
 
-            <syncfusion:TreeViewAdv.ItemContainerStyle>
-                <Style TargetType="syncfusion:TreeViewItemAdv">
-                    <Setter Property="IsExpanded" Value="True"/>
-                </Style>
-            </syncfusion:TreeViewAdv.ItemContainerStyle>
         </syncfusion:TreeViewAdv>
     </Grid>
-</Window>    
+</Window>

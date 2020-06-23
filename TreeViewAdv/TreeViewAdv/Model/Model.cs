@@ -9,15 +9,6 @@ namespace TreeViewAdv
 {
     public class Model
     {
-        public Model()
-        {
-            SubItems = new ObservableCollection<Model>();
-        }
-
         public string Header { get; set; }
-
-        public ObservableCollection<Model> SubItems { get; set; }
     }    
 }
-
-
